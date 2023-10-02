@@ -1034,6 +1034,7 @@ if [ -n "${MODULES}" ]; then
     echo "========================================================"
     echo " Copying modules files"
     cp -p ${MODULES} ${DIST_DIR}
+    cp ${ROOT_DIR}/device/google/bluejay-kernel/panel-samsung-s6e3fc3_6a.ko ${DIST_DIR}
     if [ "${COMPRESS_MODULES}" = "1" ]; then
       echo " Archiving modules to ${MODULES_ARCHIVE}"
       tar --transform="s,.*/,," -czf ${DIST_DIR}/${MODULES_ARCHIVE} ${MODULES[@]}
